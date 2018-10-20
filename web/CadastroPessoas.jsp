@@ -48,18 +48,23 @@
                     <input class="btn btn-dark" type="submit" name="inserir" value="Inserir"/>
                 </form><hr>
                 
-                <table border="1" style="margin: 5px">
-                    <tr>
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Email</th>
-                        <th>Telefone</th>
-                        <th>Comandos</th>
-                    </tr>  
-                        <%for (int i = 0; i < BD.getPessoa().size(); i++) {%>
-                     <tr>
-                        <td><%=i%></td>
+                    
+        <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Comandos</th>
+    </tr>
+    <%for (int i = 0; i < BD.getPessoa().size(); i++) {%>
+
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%=i%></th>
                         <td><%=BD.getPessoa().get(i).getNome()%></td>
                          <td><%=BD.getPessoa().get(i).getCpf()%></td>
 
@@ -69,16 +74,18 @@
                             <a href="AlterarPessoas.jsp?id=<%=i%>"> <button name="alterar" class="btn btn-primary">Alterar</button></a>
                             <a href="ExcluirPessoas.jsp?id=<%=i%>"> <button class="btn btn-danger">Excluir</button></a>
                         </td>
-                     </tr>
+                    </tr>
+  
                         <%}%>
                     </table>
                     <%}catch(Exception ex){%>
                     <h5 style="color:red"><b>Valores incorretos! Tente Novamente.</b></h5><br>
-                    <button class="btn btn-dark"><a href="CadastroPessoas.jsp">Voltar</a></button>
+                    <button class="btn btn-dark"><a href="CadastroPessoas.jsp">Voltar</a></button><br><br><br><br><br><br><br><br><br><br><br>
         <%}%>  
                     
-                </div>
-    </body>
+          </tbody>
+          </div>
+          </body>
             <%@include file="WEB-INF/jspf/footer.jspf" %>
    
 </html>

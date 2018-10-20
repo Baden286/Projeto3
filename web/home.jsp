@@ -24,8 +24,13 @@
                 <div class="col-sm-1"></div>
                 <div class="col-sm-2 card" style="width: 12rem;">
                     <div class="card-body"><br>
-                        <h5 class="text-center card-title">Bem-vindo</h5><br>
-                        <p class="text-center card-text">Escolha uma das opções ao lado para começar.</p>
+                        <h5 class="text-center card-title">Integrantes</h5><br>
+                        <h6> <p class="text-center card-text">Baden</p>
+                        <p class="text-center card-text">Diogo</p>
+                        <p class="text-center card-text">Jefferson</p>
+                        <p class="text-center card-text">Thaís</p>
+                        <p class="text-center card-text">Weslley</p></h6>
+
                     </div>
                 </div>
                 

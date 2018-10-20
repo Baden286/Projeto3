@@ -19,13 +19,17 @@
                 <h4>Confirmar Alteração</h4>
                 
                 <%
-                
+               try{
                int i = Integer.parseInt(request.getParameter("id"));
                if (request.getParameter("alterar")!=null){
                Pessoa alt = new Pessoa();
                alt.setNome(request.getParameter("nome"));
+               
+               int cpf = Integer.parseInt(request.getParameter("cpf"));
                alt.setCpf(request.getParameter("cpf"));
                alt.setEmail(request.getParameter("email"));
+               
+               int telefone = Integer.parseInt(request.getParameter("telefone"));
                alt.setTelefone(request.getParameter("telefone"));
                
                BD.getPessoa().set(i, alt);
@@ -47,7 +51,10 @@
 
                 </form>
                 
-                    
+                 <%}catch(Exception ex){%>
+                    <h5 style="color:red"><b>Valores incorretos! Tente Novamente.</b></h5><br>
+                    <button class="btn btn-dark"><a href="CadastroPessoas.jsp">Voltar</a></button><br><br><br><br><br><br><br><br><br><br><br>
+        <%}%>     
           </div>            
     </body>
     <div class="footer">

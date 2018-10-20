@@ -39,18 +39,22 @@
                 </form><hr>
         
                 
-                <table border="1" style="margin: 5px">
-                    <tr>
-                        <th>Id</th>
-                    <th>Cor</th></th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Palca</th>
-                    <th>Comandos</th></tr>
-                
-                    <% for(int i=0;i<BD.getVeiculo().size();i++){%>
-                    <tr>
-                      <td><%= i%>
+        <table class="table table-dark">
+         <thead>
+         <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Comandos</th>
+    </tr>
+    <%for (int i = 0; i < BD.getVeiculo().size(); i++) {%>
+
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%=i%></th>
                       <td><%= BD.getVeiculo().get(i).getCor() %>
                       <td><%= BD.getVeiculo().get(i).getMarca() %>
                       <td><%= BD.getVeiculo().get(i).getModelo() %>
@@ -64,10 +68,12 @@
                 </table>
                  <%}catch(Exception ex){%>
                     <h5 style="color:red"><b>Valores incorretos! Tente Novamente.</b></h5><br>
-                    <button class="btn btn-dark"><a href="CadastroPessoas.jsp">Voltar</a></button>
+                    <button class="btn btn-dark"><a href="CadastroPessoas.jsp">Voltar</a></button><br><br><br><br><br><br><br><br><br><br><br>
         <%}%>   
-          </div>      
-    </body>
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
+          </tbody>
+          </div>
+          </body>
+            <%@include file="WEB-INF/jspf/footer.jspf" %>
    
 </html>
+

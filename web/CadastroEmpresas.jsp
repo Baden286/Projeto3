@@ -49,20 +49,24 @@
                 <input type="submit" name="inserir" Class="btn btn-dark" value="inserir"/>
             </div>
         </form><hr>
+        
+        <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Razão Social</th>
+      <th scope="col">CNPJ</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Comandos</th>
+    </tr>
+    <%for (int i = 0; i < BD.getEmpresa().size(); i++) {%>
 
-        <table border="1" style="margin: 5px" >
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Razão Social</th>
-                <th>CNPJ</th>
-                <th>Telefone</th>
-                <th>Website</th>
-                <th>Comandos</th>
-            </tr>  
-            <%for (int i = 0; i < BD.getEmpresa().size(); i++) {%>
-                <tr>
-                   <td><%=i%></td>
+  </thead>
+  <tbody>
+<tr>
+      <th scope="row"><%=i%></th>
                    <td><%=BD.getEmpresa().get(i).getNome()%></td>
                    <td><%=BD.getEmpresa().get(i).getRazaoSocial()%></td>
                    <td><%=BD.getEmpresa().get(i).getCnpj()%></td>
@@ -78,14 +82,11 @@
 
         <%}catch(Exception ex){%>
                     <h5 style="color:red"><b>Valores incorretos! Tente Novamente.</b></h5><br>
-                    <button class="btn btn-dark"><a href="CadastroEmpresas.jsp">Voltar</a></button>
+                    <button class="btn btn-dark "><a href="CadastroEmpresas.jsp">Voltar</a></button><br><br><br><br><br><br><br><br><br><br><br>
         <%}%>  
+        </tbody>
         </div>
-                    <%@include file="WEB-INF/jspf/footer.jspf" %>
-
         </body>
-    
-    
-
+                    <%@include file="WEB-INF/jspf/footer.jspf" %>
 </html>
 

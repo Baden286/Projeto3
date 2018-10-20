@@ -19,13 +19,17 @@
         <h4>Confirmar Alteração</h4>
         
         <%
-
+               try{
                int i = Integer.parseInt(request.getParameter("id"));
                if (request.getParameter("alterar")!=null){
                Empresa alt = new Empresa();
                alt.setNome(request.getParameter("nome"));
                alt.setRazaoSocial(request.getParameter("razaoSocial"));
+               
+               int cnpj = Integer.parseInt(request.getParameter("cnpj"));
                alt.setCnpj(request.getParameter("cnpj"));
+               
+               int telefone = Integer.parseInt(request.getParameter("telefone"));
                alt.setTelefone(request.getParameter("telefone"));
                alt.setWebsite(request.getParameter("website"));
                
@@ -45,7 +49,13 @@
                 <button name="alterar" class="btn btn-primary">Alterar</button>
             </div>
         </form>  
+                                 <%}catch(Exception ex){%>
+                    <h5 style="color:red"><b>Valores incorretos! Tente Novamente.</b></h5><br>
+                    <button class="btn btn-dark"><a href="CadastroEmpresas.jsp">Voltar</a></button><br><br><br><br><br><br><br><br><br><br><br>
+        <%}%>     
+
         </div>
+
     </body>
     <div class="footer">
         <%@include file="WEB-INF/jspf/footer.jspf" %>

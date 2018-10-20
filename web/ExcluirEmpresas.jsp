@@ -37,7 +37,7 @@
                 Telefone: <br> <%= p.getTelefone()%><br>
                 Website: <br> <%= p.getWebsite()%><br><br>
                 <button name="excluir" class="btn btn-danger">Excluir</button>
-                <button class="btn btn-dark"><a href="CadastroEmpresas.jsp" >Voltar</a></button>
+                <button class="btn btn-dark"><a href="CadastroEmpresas.jsp" >Voltar</a></button><br><br>
             </div>
         </form>
                 </div>

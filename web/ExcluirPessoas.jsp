@@ -40,7 +40,7 @@
                     Email: <br> <%= p.getEmail()%> <br>
                     Telefone: <br> <%= p.getTelefone()%> <br><br>
                     <button name="excluir" class="btn btn-danger">Excluir</button>
-                    <button class="btn btn-dark" ><a href="CadastroPessoas.jsp" >Voltar</a></button>
+                    <button class="btn btn-dark" ><a href="CadastroPessoas.jsp" >Voltar</a></button><br><br>
                     
                 </form>
         </div>         

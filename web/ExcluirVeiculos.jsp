@@ -37,7 +37,7 @@
                     Modelo: <br> <%= ex.getModelo()%> <br>
                     Placa: <br> <%= ex.getPlaca()%> <br><br>
                     <button name="excluir" class="btn btn-danger">Excluir</button>
-                    <button class="btn btn-dark"><a href="CadastroVeiculos.jsp">Voltar</a></button>
+                    <button class="btn btn-dark"><a href="CadastroVeiculos.jsp">Voltar</a></button><br><br>
                     
                 </form>
         </div>
